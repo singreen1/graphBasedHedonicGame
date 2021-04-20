@@ -47,4 +47,12 @@ class NodeSet extends ArrayList<Node>{
         ans.add(n);
     return ans ;
   }
+  void makeFriends(boolean[][] friendsList){
+    for(int i = 0 ; i < friendsList[].length ; i++)
+      for(int j = i+1 ; j < friendsList[].length ; j++)
+      if(friendsList[i][j]){
+        this.get(i).friends.add(this.get(j)) ;
+        this.get(j).friends.add(this.get(i)) ;
+      }
+  }
 }
